@@ -52,14 +52,19 @@ namespace webApiWDTower.Repositories
         {
             Usuario usuarioBuscado = ctx.Usuario.Find(id);
 
-            if (usuarioNovaSenha.Apelido != null)
+            if (usuarioBuscado != null)
             {
-                usuarioBuscado.Apelido = usuarioNovaSenha.Apelido;
+                if (usuarioNovaSenha.Senha != null)
+                {
+                    usuarioBuscado.Senha = usuarioNovaSenha.Senha;
+                }
+
+                ctx.Usuario.Update(usuarioBuscado);
+
+                ctx.SaveChanges();
             }
 
-            ctx.Usuario.Update(usuarioBuscado);
-
-            ctx.SaveChanges();
+            
         }
 
         public Usuario BuscarPorId(int id)

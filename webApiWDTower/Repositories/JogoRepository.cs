@@ -25,12 +25,13 @@ namespace webApiWDTower.Repositories
 
         public List<Jogo> ListarJogos()
         {
-            return ctx.Jogo.OrderBy(x => x.Data).Include(sc => sc.SelecaoCasaNavigation).Include(sn => sn.SelecaoVisitanteNavigation).ToList();
+            return ctx.Jogo.ToList();
         }
 
         public List<Jogo> ListarSelecaoJogo(string selecao)
         {
-            return ctx.Jogo.ToList().FindAll(x => x.SelecaoCasaNavigation.Nome == selecao || x.SelecaoVisitanteNavigation.Nome == selecao);
+
+            return ctx.Jogo.Where(x => x.SelecaoVisitanteNavigation.Nome == selecao || x.SelecaoCasaNavigation.Nome == selecao).ToList();
         }
     }
 }

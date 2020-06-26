@@ -36,7 +36,7 @@
 					"response": []
 				},
 				{
-					"name": "{{URL}}Usuario",
+					"name": "Cadastrar Usuário",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -59,24 +59,24 @@
 					"response": []
 				},
 				{
-					"name": "{{URL}}usuario/1",
+					"name": "Buscar Usuário por ID",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{URL}}usuario/1",
+							"raw": "{{URL}}usuario/2",
 							"host": [
 								"{{URL}}usuario"
 							],
 							"path": [
-								"1"
+								"2"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "{{URL}}Usuario/1",
+					"name": "Atualizar Usuário",
 					"request": {
 						"method": "PUT",
 						"header": [],
@@ -102,13 +102,13 @@
 					"response": []
 				},
 				{
-					"name": "{{URL}}Usuario/Login",
+					"name": "Login",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"carllottadias@gmail.com\",\r\n    \"senha\": \"carla123\"\r\n}",
+							"raw": "{\r\n    \"email\": \"carllotta\",\r\n    \"senha\": \"carla123\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -116,19 +116,16 @@
 							}
 						},
 						"url": {
-							"raw": "{{URL}}Usuario/Login",
+							"raw": "{{URL}}Login",
 							"host": [
-								"{{URL}}Usuario"
-							],
-							"path": [
-								"Login"
+								"{{URL}}Login"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "{{URL}}Usuario/1",
+					"name": "Deletar Usuário",
 					"request": {
 						"method": "DELETE",
 						"header": [],
@@ -143,6 +140,33 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Alterar senha ",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"senha\": \"123alexia\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}Usuario/Senha/2",
+							"host": [
+								"{{URL}}Usuario"
+							],
+							"path": [
+								"Senha",
+								"2"
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}
@@ -151,7 +175,7 @@
 			"name": "Jogador",
 			"item": [
 				{
-					"name": "{{URL}}Jogador/Selecao/2",
+					"name": "Buscar Jogador po Seleção",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -169,7 +193,7 @@
 					"response": []
 				},
 				{
-					"name": "{{URL}}Jogador/Manuel Neuer",
+					"name": "Buscar Jogador po Nome",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -187,6 +211,100 @@
 				}
 			],
 			"description": "Requisições de jogador",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Jogo",
+			"item": [
+				{
+					"name": "Listar todos os jogos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}Jogo",
+							"host": [
+								"{{URL}}Jogo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar jogos por Estádio",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}Jogo/BuscarPorEstadio/Arena Corinthians",
+							"host": [
+								"{{URL}}Jogo"
+							],
+							"path": [
+								"BuscarPorEstadio",
+								"Arena Corinthians"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar jogos por data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}Jogo/BuscarDataJogo/2020-07-11",
+							"host": [
+								"{{URL}}Jogo"
+							],
+							"path": [
+								"BuscarDataJogo",
+								"2020-07-11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar jogos por seleção",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}Jogo/BuscarPorSelecao/Alemanha",
+							"host": [
+								"{{URL}}Jogo"
+							],
+							"path": [
+								"BuscarPorSelecao",
+								"Alemanha"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Seleção",
+			"item": [
+				{
+					"name": "Listar todas as seleções",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}Selecao",
+							"host": [
+								"{{URL}}Selecao"
+							]
+						}
+					},
+					"response": []
+				}
+			],
 			"protocolProfileBehavior": {}
 		}
 	],

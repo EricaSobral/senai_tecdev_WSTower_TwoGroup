@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lekin\\OneDrive\\Área de Trabalho\\senai_tecdev_WSTower_TwoGroup\\webApiWDTower\\webApiWDTower.csproj": {}
+    "C:\\Users\\carll\\OneDrive\\Ambiente de Trabalho\\senai_tecdev_WSTower_TwoGroup\\webApiWDTower\\webApiWDTower.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lekin\\OneDrive\\Área de Trabalho\\senai_tecdev_WSTower_TwoGroup\\webApiWDTower\\webApiWDTower.csproj": {
+    "C:\\Users\\carll\\OneDrive\\Ambiente de Trabalho\\senai_tecdev_WSTower_TwoGroup\\webApiWDTower\\webApiWDTower.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lekin\\OneDrive\\Área de Trabalho\\senai_tecdev_WSTower_TwoGroup\\webApiWDTower\\webApiWDTower.csproj",
+        "projectUniqueName": "C:\\Users\\carll\\OneDrive\\Ambiente de Trabalho\\senai_tecdev_WSTower_TwoGroup\\webApiWDTower\\webApiWDTower.csproj",
         "projectName": "webApiWDTower",
-        "projectPath": "C:\\Users\\lekin\\OneDrive\\Área de Trabalho\\senai_tecdev_WSTower_TwoGroup\\webApiWDTower\\webApiWDTower.csproj",
-        "packagesPath": "C:\\Users\\lekin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lekin\\OneDrive\\Área de Trabalho\\senai_tecdev_WSTower_TwoGroup\\webApiWDTower\\obj\\",
+        "projectPath": "C:\\Users\\carll\\OneDrive\\Ambiente de Trabalho\\senai_tecdev_WSTower_TwoGroup\\webApiWDTower\\webApiWDTower.csproj",
+        "packagesPath": "C:\\Users\\carll\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\carll\\OneDrive\\Ambiente de Trabalho\\senai_tecdev_WSTower_TwoGroup\\webApiWDTower\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\lekin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\carll\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
