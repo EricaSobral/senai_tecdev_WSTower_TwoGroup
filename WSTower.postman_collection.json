@@ -1,0 +1,194 @@
+{
+	"info": {
+		"_postman_id": "0b371d79-0901-425c-bb8e-00151c40693b",
+		"name": "WSTower",
+		"description": "Coleção com as rotas para requisições do projeto WSTower (SENAI)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Usuários",
+			"item": [
+				{
+					"name": "Listar Usuários",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}Usuario",
+							"host": [
+								"{{URL}}Usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}Usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"Nome\": \"Carla Dias\",\r\n\t\"Email\": \"carllottadias@gmail.com\",\r\n\t\"Apelido\": \"carllotta\",\r\n\t\"Senha\": \"carla123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}Usuario",
+							"host": [
+								"{{URL}}Usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}usuario/1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}usuario/1",
+							"host": [
+								"{{URL}}usuario"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}Usuario/1",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Carla Teixeira Dias\",\r\n    \"email\": \"carllottadias@gmail.com\",\r\n    \"apelido\": \"carllottaDias\"\r\n}  ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}Usuario/1",
+							"host": [
+								"{{URL}}Usuario"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}Usuario/Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"carllottadias@gmail.com\",\r\n    \"senha\": \"carla123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}Usuario/Login",
+							"host": [
+								"{{URL}}Usuario"
+							],
+							"path": [
+								"Login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}Usuario/1",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}Usuario/1",
+							"host": [
+								"{{URL}}Usuario"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Jogador",
+			"item": [
+				{
+					"name": "{{URL}}Jogador/Selecao/2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}Jogador/Selecao/2",
+							"host": [
+								"{{URL}}Jogador"
+							],
+							"path": [
+								"Selecao",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{URL}}Jogador/Manuel Neuer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}Jogador/Manuel Neuer",
+							"host": [
+								"{{URL}}Jogador"
+							],
+							"path": [
+								"Manuel Neuer"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Requisições de jogador",
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
