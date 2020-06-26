@@ -93,31 +93,49 @@ namespace webApiWDTower.Repositories
             return ctx.Usuario.ToList();
         }
 
-        public Usuario Login(LoginViewModel login, string email, string apelido, string senha)
+       
+        string IUsuarioRepository.Logar(LoginViewModel loginViewModel)
         {
-            throw new NotImplementedException();
+            string usuarioDados = "Ok";
+
+            using (WebApiBDContext DbContext = new WebApiBDContext())
+            {
+                var usuario = DbContext.Usuario.FirstOrDefault(u => u.Email == loginViewModel.Email || u.Apelido == loginViewModel.Apelido);
+                if (usuario == null)       
+                    
+                  return usuarioDados = "EmailApelido";
+
+                
+                
+                usuario = DbContext.Usuario.FirstOrDefault(u => (u.Email == loginViewModel.Email || u.Apelido == loginViewModel.Apelido) && u.Senha == loginViewModel.Senha);
+
+                if (usuario == null)
+                
+                    return usuarioDados = "Senha";
+                
+            }
+            return usuarioDados;
         }
 
-        //public Usuario Login(LoginViewModel login)
-        //{
 
-        //    return ctx.Usuario.FirstOrDefault(u => login.Apelido == u.Email || login.Email == u.Apelido && login.Senha == u.Senha);
+      
+   
 
-        //    Usuario usuarioBuscado = ctx.Usuario
-        //        .Include(u => u.UsuarioNavigation)
-        //        .FirstOrDefault(u => (u.Email == email || u.Apelido == apelido) && u.Senha == senha);
+    public string ValidacaoCaracteresMinimo(Usuario usuario)
+        {
+            string validar = "";
 
-        //    if (usuarioBuscado != null)
-        //    {
-        //        return usuarioBuscado;
-        //    }
+            if (usuario.Senha.Length <= 3)
+                validar = "Senha";
 
-        //    return null;
-        //}
+            if (usuario.Apelido.Length <= 3)
+                validar = "Apelido";
 
-        //public Usuario Login(LoginViewModel login, string email, string apelido, string senha)
-        //{
-        //    return ctx.Usuario.FirstOrDefault(u => login.Apelido == u.Email || login.Email == u.Apelido && login.Senha == u.Senha);
-        //}
+            if (usuario.Apelido.Length <= 3)
+                validar = "Nome";
+
+            return validar;
+        }
+
     }
 }

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿
 using Microsoft.AspNetCore.Mvc;
 using webApiWDTower.Domains;
 using webApiWDTower.Interfaces;
@@ -23,33 +19,28 @@ namespace webApiWDTower.Controllers
             _usuarioRepository = new UsuarioRepository();
         }
 
+        [HttpPost]
+        public IActionResult LoginViewModel(LoginViewModel login)
+        {
 
-        //[HttpPost]
-        //public IActionResult Post(LoginViewModel login)
-        //{
-        //    try
-        //    {
-        //        Usuario usuarioBuscado = _usuarioRepository.Login(login.Email, login.Apelido, login.Senha);
+            string uValidar = _usuarioRepository.Logar(login);
 
-        //        if (usuarioBuscado == null)
-        //        {
-        //            return NotFound("E-mail ou senha inválidos!");
-        //        }
+            if (uValidar == "EmailApelido")
+                return NotFound("Usuário não foi encontrado.");
 
 
-        //    }
-        //    catch (Exception error)
-        //    {
-        //        return BadRequest(new
-        //        {
-        //            mensagem = "Não foi possível gerar o token",
-        //            error
-        //        });
-        //    }
-        //    return Ok(new
-        //    {
-        //        mensagem = "Usuario Logado!",
-        //    });
-        //}
+
+            if (uValidar == "Senha")
+                return NotFound("Senha inválida");
+
+
+            if (uValidar == "Ok")
+                return Ok("Dados Corretos - Efetuando Login");
+
+
+            return NotFound("Erro");
+        }
     }
+
 }
+

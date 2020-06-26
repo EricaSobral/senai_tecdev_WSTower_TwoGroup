@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\uyguy\\Videos\\senai_tecdev_WSTower_TwoGroup\\webApiWDTower\\webApiWDTower.csproj": {}
+    "C:\\Users\\lekin\\OneDrive\\Área de Trabalho\\senai_tecdev_WSTower_TwoGroup\\webApiWDTower\\webApiWDTower.csproj": {}
   },
   "projects": {
-    "C:\\Users\\uyguy\\Videos\\senai_tecdev_WSTower_TwoGroup\\webApiWDTower\\webApiWDTower.csproj": {
+    "C:\\Users\\lekin\\OneDrive\\Área de Trabalho\\senai_tecdev_WSTower_TwoGroup\\webApiWDTower\\webApiWDTower.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\uyguy\\Videos\\senai_tecdev_WSTower_TwoGroup\\webApiWDTower\\webApiWDTower.csproj",
+        "projectUniqueName": "C:\\Users\\lekin\\OneDrive\\Área de Trabalho\\senai_tecdev_WSTower_TwoGroup\\webApiWDTower\\webApiWDTower.csproj",
         "projectName": "webApiWDTower",
-        "projectPath": "C:\\Users\\uyguy\\Videos\\senai_tecdev_WSTower_TwoGroup\\webApiWDTower\\webApiWDTower.csproj",
-        "packagesPath": "C:\\Users\\uyguy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\uyguy\\Videos\\senai_tecdev_WSTower_TwoGroup\\webApiWDTower\\obj\\",
+        "projectPath": "C:\\Users\\lekin\\OneDrive\\Área de Trabalho\\senai_tecdev_WSTower_TwoGroup\\webApiWDTower\\webApiWDTower.csproj",
+        "packagesPath": "C:\\Users\\lekin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lekin\\OneDrive\\Área de Trabalho\\senai_tecdev_WSTower_TwoGroup\\webApiWDTower\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\uyguy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lekin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -47,6 +46,10 @@
               "target": "Package",
               "version": "[3.1.5, )"
             },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[3.1.5, )"
@@ -72,6 +75,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.2, 3.1.2]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -80,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

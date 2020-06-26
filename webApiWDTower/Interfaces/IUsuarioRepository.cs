@@ -15,12 +15,14 @@ namespace webApiWDTower.Interfaces
 
         void Cadastrar(Usuario novoUsuario);
 
-        Usuario Login(LoginViewModel login, string email, string apelido, string senha);
+        string Logar(LoginViewModel loginViewModel);
 
         void Atualizar(int id, Usuario usuarioAtualizado);
 
         void Deletar(int id);
 
         void AtualizarSenha(int id, Usuario usuarioNovaSenha);
+
+        string ValidacaoCaracteresMinimo(Usuario usuario);
     }
 }
