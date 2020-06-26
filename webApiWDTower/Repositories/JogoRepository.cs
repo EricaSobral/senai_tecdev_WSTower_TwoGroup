@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using webApiWDTower.Contexts;
 using webApiWDTower.Domains;
 using webApiWDTower.Interfaces;
 
@@ -9,29 +11,26 @@ namespace webApiWDTower.Repositories
 {
     public class JogoRepository : IJogoRepository
     {
-        public void Atualizar(int id, Jogo jogoAtualizado)
+        WebApiBDContext ctx = new WebApiBDContext();
+        public List<Jogo> ListarDataJogo(DateTime data)
         {
-            throw new NotImplementedException();
+            return ctx.Jogo.ToList().FindAll(x => Convert.ToDateTime(x.Data).Date == data);
+            
         }
 
-        public Jogo BuscarPorId(int id)
+        public List<Jogo> ListarEstadioJogo(string estadio)
         {
-            throw new NotImplementedException();
+            return ctx.Jogo.ToList().FindAll(x => x.Estadio == estadio);
         }
 
-        public void Cadastrar(Jogo novoJogo)
+        public List<Jogo> ListarJogos()
         {
-            throw new NotImplementedException();
+            return ctx.Jogo.OrderBy(x => x.Data).Include(sc => sc.SelecaoCasaNavigation).Include(sn => sn.SelecaoVisitanteNavigation).ToList();
         }
 
-        public void Deletar(int id)
+        public List<Jogo> ListarSelecaoJogo(string selecao)
         {
-            throw new NotImplementedException();
-        }
-
-        public List<Jogo> Listar()
-        {
-            throw new NotImplementedException();
+            return ctx.Jogo.ToList().FindAll(x => x.SelecaoCasaNavigation.Nome == selecao || x.SelecaoVisitanteNavigation.Nome == selecao);
         }
     }
 }

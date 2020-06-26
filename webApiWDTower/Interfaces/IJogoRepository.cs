@@ -6,17 +6,15 @@ using webApiWDTower.Domains;
 
 namespace webApiWDTower.Interfaces
 {
+
     public interface IJogoRepository
     {
-        List<Jogo> Listar();
+        public List<Jogo> ListarJogos();
 
-        Jogo BuscarPorId(int id);
+        public List<Jogo> ListarDataJogo(DateTime data);
 
-        void Cadastrar(Jogo novoJogo);
+        public List<Jogo> ListarEstadioJogo(string estadio);
 
-
-        void Atualizar(int id, Jogo jogoAtualizado);
-
-        void Deletar(int id);
+        public List<Jogo> ListarSelecaoJogo(string selecao);
     }
 }

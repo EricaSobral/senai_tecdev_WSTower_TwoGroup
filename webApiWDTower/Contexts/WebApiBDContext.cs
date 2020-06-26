@@ -26,7 +26,7 @@ namespace webApiWDTower.Contexts
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Data Source=LAPTOP-MG5LD6I4\\SQLEXPRESS; Initial Catalog=Campeonato; Integrated Security=True");
+                optionsBuilder.UseSqlServer("Data Source=DESKTOP-EUCOQ5H\\SQLEXPRESS; Initial Catalog=Campeonato; Integrated Security=True");
             }
         }
 

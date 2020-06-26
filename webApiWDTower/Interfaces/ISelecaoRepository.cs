@@ -8,14 +8,6 @@ namespace webApiWDTower.Interfaces
 {
     interface ISelecaoRepository
     {
-        List<Selecao> Listar();
-
-        Selecao BuscarPorId(int id);
-
-        void Cadastrar(Selecao novaSelecao);
-
-        void Atualizar(int id, Selecao selecaoAtualizada);
-
-        void Deletar(int id);
+        public List<Selecao> ListarSelecao();
     }
 }
